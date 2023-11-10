@@ -23,6 +23,9 @@ public class Progam {
 				System.out.print("Source: ");
 				ChessPosition source = UI.readChessPosition(sc);
 				
+				boolean[][] possibleMove = chessMatch.possibleMove(source);
+				UI.clearScreen();
+				UI.printBoard(chessMatch.getpieces(), possibleMove);
 				System.out.println();
 				System.out.println("Target: ");
 				ChessPosition target = UI.readChessPosition(sc);
