@@ -17,50 +17,41 @@ public class King extends ChessPiece {
 
         Position p = new Position(0, 0);
 
-        // Movimentos possíveis para o Rei
-        // Movimento para cima
         p.setValues(position.getRow() - 1, position.getColumn());
         if (getBoard().positionExists(p) && !getBoard().thereIsAPiece(p)) {
             mat[p.getRow()][p.getColumn()] = true;
         }
-
-        // Movimento para a diagonal superior esquerda
+        
         p.setValues(position.getRow() - 1, position.getColumn() - 1);
         if (getBoard().positionExists(p) && !getBoard().thereIsAPiece(p)) {
             mat[p.getRow()][p.getColumn()] = true;
         }
 
-        // Movimento para a esquerda
         p.setValues(position.getRow(), position.getColumn() - 1);
         if (getBoard().positionExists(p) && !getBoard().thereIsAPiece(p)) {
             mat[p.getRow()][p.getColumn()] = true;
         }
 
-        // Movimento para a diagonal inferior esquerda
         p.setValues(position.getRow() + 1, position.getColumn() - 1);
         if (getBoard().positionExists(p) && !getBoard().thereIsAPiece(p)) {
             mat[p.getRow()][p.getColumn()] = true;
         }
 
-        // Movimento para baixo
         p.setValues(position.getRow() + 1, position.getColumn());
         if (getBoard().positionExists(p) && !getBoard().thereIsAPiece(p)) {
             mat[p.getRow()][p.getColumn()] = true;
         }
 
-        // Movimento para a diagonal inferior direita
         p.setValues(position.getRow() + 1, position.getColumn() + 1);
         if (getBoard().positionExists(p) && !getBoard().thereIsAPiece(p)) {
             mat[p.getRow()][p.getColumn()] = true;
         }
 
-        // Movimento para a direita
         p.setValues(position.getRow(), position.getColumn() + 1);
         if (getBoard().positionExists(p) && !getBoard().thereIsAPiece(p)) {
             mat[p.getRow()][p.getColumn()] = true;
         }
 
-        // Movimento para a diagonal superior direita
         p.setValues(position.getRow() - 1, position.getColumn() + 1);
         if (getBoard().positionExists(p) && !getBoard().thereIsAPiece(p)) {
             mat[p.getRow()][p.getColumn()] = true;
